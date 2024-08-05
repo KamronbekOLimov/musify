@@ -15,17 +15,20 @@ header {
   background-color: #070606;
   background-image: url(./imgs/headerDark.png);
   height: 100vh;
-  position: relative;
+  overflow: hidden;
 }
 header.active{
     background: #FFFFFF;
     height: 100vh;
     transition: all .3s ease;
 }
+.hero .container{
+  position: relative;
+}
 .headerLight{
     position: absolute;
-    right: 50px;
-    bottom: 0;
+    right: 0px;
+    bottom: -300px;
     width: 600px;
     z-index: 0;
 }
@@ -167,6 +170,8 @@ header.active .search, header.active .cart{
   gap: 5px;
 }
 .musics {
+  position: absolute;
+  right: 0;
   display: grid;
   align-items: center;
   grid-template-columns: repeat(4, 1fr);
@@ -179,6 +184,7 @@ header.active .search, header.active .cart{
   border-radius: 20px;
   padding: 20px;
   background: linear-gradient(116.15deg, #c0c0c0a1 -10.88%, #ffffff7d -10.87%, #ffffff12 74.79%);
+
 }
 .music h3, .music p{
     color: #FFFFFF;
@@ -187,10 +193,7 @@ header.active .music h3, header.active .music p{
   color: #000000;
 }
 .music i{
-    color: #F14A16;
-}
-header.active .music i{
-  color: red;
+    color: red;
 }
 .music img {
   margin-top: -60px;

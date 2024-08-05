@@ -9,12 +9,8 @@ let localMode = localStorage.getItem("mode")
 
 mode.addEventListener("click", () => {
   header.classList.toggle("active");
-  localFunction()
 });
 
-const localFunction = () => {
-  localStorage.setItem("mode", "mode")
-}
 musPlay.forEach((item, index) => {
   item.addEventListener("click", () => {
     if (item.classList.contains("fa-circle-play")) {
