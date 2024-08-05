@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+.container {
+  margin: 0 auto;
+  max-width: 1250px;
+}
+header {
+  background-color: #070606;
+  background-image: url(./imgs/headerDark.png);
+  height: 100vh;
+  position: relative;
+}
+header.active{
+    background: #FFFFFF;
+    height: 100vh;
+    transition: all .3s ease;
+}
+.headerLight{
+    position: absolute;
+    right: 50px;
+    bottom: 0;
+    width: 600px;
+    z-index: 0;
+}
+.logo {
+  height: 100px;
+  width: 100px;
+}
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.links a {
+  font-size: 24px;
+  font-weight: 400;
+  position: relative;
+  color: #FFFFFF;
+}
+header.active .links a{
+    color: #000000;
+}
+.links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1.7px;
+  bottom: -2px;
+  left: 0;
+  background-color: #F14A16;
+  transition: .2s;
+}
+.links a:hover::after {
+  width: 100%;
+}
+.mode {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  justify-content: center;
+  width: 80px;
+  height: 40px;
+  box-shadow: 5px 5px 10px 0px #00000040;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  background-color: #FFFFFF;
+}
+.circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #888888;
+  left: 7px;
+  transition: all .2s;
+}
+header.active .circle {
+  left: 45px;
+}
+.btns {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.search, .cart {
+  border: none;
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  color: #FFFFFF;
+}
+.login {
+  color: #F14A16;
+  border: 1.7px solid #F14A16;
+  background-color: transparent;
+  padding: 5px 20px;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.heroInfo h1 {
+  font-size: 65px;
+  font-weight: 700;
+  line-height: 70px;
+  width: 40%;
+  margin-bottom: 20px;
+  color: #FFFFFF;
+}
+header.active .heroInfo h1{
+    color: #000000;
+}
+.heroInfo h1 span {
+  color: #F14A16;
+}
+.heroInfo p {
+  color: #A4A4A4;
+  font-size: 28px;
+  font-weight: 250;
+  line-height: 38px;
+  width: 60%;
+  margin-bottom: 20px;
+}
+header.active .heroInfo p{
+    color: #282828;
+}
+.herobtns {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.shop, .add {
+  color: #F14A16;
+  border: 1.7px solid #F14A16;
+  background-color: transparent;
+  padding: 10px 30px;
+  font-size: 17px;
+  font-weight: 600;
+  border-radius: 10px;
+  cursor: pointer;
+}
+header.active .search, header.active .cart{
+  color: #000000;
+}
+.add {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.musics {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: end;
+  gap: 30px;
+  margin-top: 50px;
+}
+.music {
+  box-shadow: 5px 5px 10px 0px #00000040;
+  border-radius: 20px;
+  padding: 20px;
+  background: linear-gradient(116.15deg, #c0c0c0a1 -10.88%, #ffffff7d -10.87%, #ffffff12 74.79%);
+}
+.music h3, .music p{
+    color: #FFFFFF;
+}
+header.active .music h3, header.active .music p{
+  color: #000000;
+}
+.music i{
+    color: #F14A16;
+}
+header.active .music i{
+  color: red;
+}
+.music img {
+  margin-top: -60px;
+  width: 80px;
+}
+.plays {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.fa-circle-play,
+.fa-circle-pause {
+  font-size: 30px; 
+  transition: none;
+  display: inline-block;
+}
+.music .plays i {
+  font-size: 30px;
+  cursor: pointer;
+}
+.music .plays i:hover {
+  transform: none; 
+}
+
+.music .plays i:active {
+  transform: none; 
+}
+.musicInfo {
+  display: flex;
+  flex-direction: column;
+}
+.airPots{
+    filter: drop-shadow(5px 5px 10px red);
+}
+@keyframes anime {
+    to {
+        transform: scale(1.2);
+    }
+}
+.airPots.anime {
+    animation: anime .7s linear infinite;
+}
